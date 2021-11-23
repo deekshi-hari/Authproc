@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-a@((#wfafa@*x+7hi94%cvuuk-hik#d0prxsa1*38h)86v@s4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,8 +42,32 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
     'apps.users',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.apple',
+    # 'allauth.socialaccount.providers.github',
+    'crispy_forms',
+
+    #rest_auth
+    'rest_auth',
+    'rest_auth.registration',
 ]
+
+SITE_ID = 1
+REST_USE_JWT = True 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,6 +92,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -141,3 +166,67 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    },
+    'apple': {
+        'APP': {
+            # Your service identifier.
+            'client_id':"com.tradebrains.oauth",
+
+            # The Key ID (visible in the "View Key Details" page).
+            "secret": "Y883Y68ZWY",
+
+
+            "key": "8ZU85365NZ",
+
+           
+            "certificate_key": """-----BEGIN PRIVATE KEY-----
+MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgoNbFsyPGuA7V6bCP
+mBCJLVgP54pHCnIk3ujN30Bu+IegCgYIKoZIzj0DAQehRANCAAT0Vpp8l/9lkcCg
+9mHyOJiR4ZIMKSky5z2pUo/QcAUkbXrgjq3Z5n79nf0ztfLHF+X8j2HlJ5VuALgb
+LlPO+GfE
+-----END PRIVATE KEY-----"""
+        }
+    }
+}
+
+LOGIN_REDIRECT_URL = 'home'
+
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+LOGOUT_REDIRECT_URL = 'login'
+
+# import jwt
+
+# headers = {
+#    'kid': settings.SOCIAL_AUTH_APPLE_KEY_ID
+# }
+
+# payload = {
+#    'iss': settings.SOCIAL_AUTH_APPLE_TEAM_ID,
+#    'iat': timezone.now(),
+#    'exp': timezone.now() + timedelta(days=180),
+#    'aud': 'https://appleid.apple.com',
+#    'sub': settings.CLIENT_ID,
+# }
+
+# client_secret = jwt.encode(
+#    payload, 
+#    settings.SOCIAL_AUTH_APPLE_PRIVATE_KEY, 
+#    algorithm='ES256', 
+#    headers=headers
+# ).decode("utf-8")

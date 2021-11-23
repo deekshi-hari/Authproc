@@ -1,0 +1,5 @@
+# To use the http client, install REST Client extension of Visual Studio Code.
+# To send the request and get the result, click the 'Send Request' 
+GET http://127.0.0.1:8000/hello/ HTTP/1.1
+content-type: application/json
+Authorization: Token 106c4cd083f530077f286d1322a000d7286f6990
