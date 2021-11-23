@@ -11,7 +11,7 @@ django-environ==0.8.1
 django-mysql==4.2.0
 django-rest-auth==0.9.5
 djangorestframework==3.12.4
-djangorestframework-jwt==1.11.0
+djangorestframework-jwt
 entrypoints==0.3
 environ==1.0
 gunicorn==20.1.0
