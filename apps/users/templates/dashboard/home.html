@@ -8,4 +8,5 @@
         <p>Your Email: {{ user.email }}</p>
         <a class="btn btn-dark" href="{% url 'socialaccount_connections' %}">Settings</a>
     </div>
+    {{ auth_error }}
 {% endblock %}
