@@ -186,8 +186,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         }
     },
-#     'apple': {
-#         'APP': {
+    'apple': {
+        'APP': {
 #             # Your service identifier.
 #             'client_id':"com.tradebrains.testapp2",
 
@@ -198,14 +198,14 @@ SOCIALACCOUNT_PROVIDERS = {
 #             "key": "8ZU85365NZ",
 
            
-#             "certificate_key": """-----BEGIN PRIVATE KEY-----
-# MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgoNbFsyPGuA7V6bCP
-# mBCJLVgP54pHCnIk3ujN30Bu+IegCgYIKoZIzj0DAQehRANCAAT0Vpp8l/9lkcCg
-# 9mHyOJiR4ZIMKSky5z2pUo/QcAUkbXrgjq3Z5n79nf0ztfLHF+X8j2HlJ5VuALgb
-# LlPO+GfE
-# -----END PRIVATE KEY-----"""
-#         }
-#     }
+            "certificate_key": """-----BEGIN PRIVATE KEY-----
+MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgoNbFsyPGuA7V6bCP
+mBCJLVgP54pHCnIk3ujN30Bu+IegCgYIKoZIzj0DAQehRANCAAT0Vpp8l/9lkcCg
+9mHyOJiR4ZIMKSky5z2pUo/QcAUkbXrgjq3Z5n79nf0ztfLHF+X8j2HlJ5VuALgb
+LlPO+GfE
+-----END PRIVATE KEY-----"""
+        }
+    }
 }
 
 LOGIN_REDIRECT_URL = 'home'
