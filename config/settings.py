@@ -188,14 +188,14 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'apple': {
         'APP': {
-#             # Your service identifier.
-#             'client_id':"com.tradebrains.testapp2",
+            # Your service identifier.
+            'client_id':"com.tradebrains.testapp2",
 
-#             # The Key ID (visible in the "View Key Details" page).
-#             "secret": "Y883Y68ZWY",
+            # The Key ID (visible in the "View Key Details" page).
+            "secret": "Y883Y68ZWY",
 
 
-#             "key": "8ZU85365NZ",
+            "key": "8ZU85365NZ",
 
            
             "certificate_key": """-----BEGIN PRIVATE KEY-----
