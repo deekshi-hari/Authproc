@@ -1,7 +1,16 @@
+from django.http import HttpRequest
+from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth import get_user_model
 from rest_auth.registration.serializers import SocialLoginSerializer
 from rest_framework import serializers
+from allauth.socialaccount.helpers import complete_social_login
+from allauth.account import app_settings as allauth_settings
+from requests.exceptions import HTTPError
+from allauth.account.adapter import get_adapter
 
 class CustomAppleSocialLoginSerializer(SocialLoginSerializer):
+    access_token = serializers.CharField(required=False, allow_blank=True)
+    code = serializers.CharField(required=False, allow_blank=True)
     def validate(self, attrs):
         view = self.context.get('view')
         request = self._get_request()
