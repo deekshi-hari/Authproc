@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 REST_USE_JWT = True 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
