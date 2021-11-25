@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     #rest_auth
     'rest_auth',
     'rest_auth.registration',
+    'dj_rest_auth',
 ]
 
 SITE_ID = 2

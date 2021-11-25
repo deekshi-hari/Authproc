@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('apps.users.urls')),
     path('accounts/', include('allauth.urls')),
     path('rest-auth/', include('rest_auth.urls')),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
