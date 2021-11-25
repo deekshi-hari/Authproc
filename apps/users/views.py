@@ -9,6 +9,7 @@ from allauth.socialaccount.providers.apple.views import AppleOAuth2Adapter
 from allauth.socialaccount.providers.apple.client import AppleOAuth2Client
 from rest_auth.registration.views import SocialLoginView
 from .serializers import CustomAppleSocialLoginSerializer
+from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 
 # Create your views here.
 def login(request):
@@ -33,3 +34,4 @@ class AppleLogin(SocialLoginView):
     callback_url = 'http://127.0.0.1:8000/api/auth/apple/callback/"'
     client_class = AppleOAuth2Client
     serializer_class = CustomAppleSocialLoginSerializer
+
