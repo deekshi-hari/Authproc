@@ -196,17 +196,17 @@ SOCIALACCOUNT_PROVIDERS = {
             'client_id':"com.tradebrains.testapp2",
 
             # The Key ID (visible in the "View Key Details" page).
-            "secret": "Y883Y68ZWY",
+            "secret": "V8XP745SV5",
 
 
             "key": "8ZU85365NZ",
 
            
             "certificate_key": """-----BEGIN PRIVATE KEY-----
-MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgoNbFsyPGuA7V6bCP
-mBCJLVgP54pHCnIk3ujN30Bu+IegCgYIKoZIzj0DAQehRANCAAT0Vpp8l/9lkcCg
-9mHyOJiR4ZIMKSky5z2pUo/QcAUkbXrgjq3Z5n79nf0ztfLHF+X8j2HlJ5VuALgb
-LlPO+GfE
+MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgCR9oAyaxK1TCBFUu
+lQqg4yEnV3/tCtKa/fx6qvlSzYSgCgYIKoZIzj0DAQehRANCAARRxY5DJ4FsiaVq
+D1D9lYYTpSseVYVFVrIdane5n0/LIYBHeAgtr9ZXSfQHuwSCI4xsLeUGBuGWQkDn
+ZjxhOtAQ
 -----END PRIVATE KEY-----"""
         }
     }
