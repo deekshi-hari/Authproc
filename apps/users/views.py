@@ -27,7 +27,7 @@ class HelloView(APIView):
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
     client_class = OAuth2Client
-    callback_url = "http://127.0.0.1:8000/api/auth/google/callback/"
+    callback_url = "https://auth-django-proc.herokuapp.com/home/"
 
 class AppleLogin(SocialLoginView):
     adapter_class = AppleOAuth2Adapter

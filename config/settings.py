@@ -59,10 +59,11 @@ INSTALLED_APPS = [
     #rest_auth
     'rest_auth',
     'rest_auth.registration',
-    'dj_rest_auth',
+    # 'dj_rest_auth',
+    # 'dj_rest_auth.registration',
 ]
 
-SITE_ID = 2
+SITE_ID = 1
 REST_USE_JWT = True 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -217,3 +218,4 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 LOGOUT_REDIRECT_URL = 'login'
 
+SECURE_SSL_REDIRECT = True
