@@ -14,6 +14,6 @@ urlpatterns = [
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
     # path('auth/google/', GoogleLogin.as_view(), name='google_login'),
     # path('rest-auth/apple/', AppleLogin.as_view(), name='apple_login'),
-    path('dj-rest-auth/apple/', AppleLogin.as_view(), name='apple_login')
+    # path('dj-rest-auth/apple/', AppleLogin.as_view(), name='apple_login')
 ]
 

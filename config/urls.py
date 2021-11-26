@@ -19,6 +19,7 @@ from django.views import static
 from django.views.static import serve
 from django.conf import settings
 from django.conf.urls import url
+from apps.users.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +28,7 @@ urlpatterns = [
     # path('rest-auth/', include('rest_auth.urls')),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+    path('dj-rest-auth/apple/', AppleLogin.as_view(), name='apple_login'),
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
