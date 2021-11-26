@@ -57,10 +57,11 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     #rest_auth
-    'rest_auth',
-    'rest_auth.registration',
-    # 'dj_rest_auth',
-    # 'dj_rest_auth.registration',
+    # 'rest_auth',
+    # 'rest_auth.registration',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+    # 'social_django',
 ]
 
 SITE_ID = 1
@@ -178,6 +179,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
+    'social_core.backends.apple.AppleIdAuth'
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -218,4 +220,4 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 LOGOUT_REDIRECT_URL = 'login'
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False

@@ -11,6 +11,7 @@ from rest_auth.registration.views import SocialLoginView
 from .serializers import CustomAppleSocialLoginSerializer
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 
+
 # Create your views here.
 def login(request):
     context = {}
@@ -31,7 +32,8 @@ class GoogleLogin(SocialLoginView):
 
 class AppleLogin(SocialLoginView):
     adapter_class = AppleOAuth2Adapter
-    callback_url = "https://auth-django-proc.herokuapp.com/home/"
+    callback_url = "https://auth-django-proc.herokuapp.com/accounts/apple/login/callback/"
     client_class = AppleOAuth2Client
     serializer_class = CustomAppleSocialLoginSerializer
+
 
