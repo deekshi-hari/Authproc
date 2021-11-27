@@ -57,10 +57,10 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     #rest_auth
-    'rest_auth',
-    'rest_auth.registration',
-    # 'dj_rest_auth',
-    # 'dj_rest_auth.registration',
+    # 'rest_auth',
+    # 'rest_auth.registration',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
 ]
 
 SITE_ID = 1
