@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     # 'rest_auth.registration',
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    # 'social_django',
 ]
 
 SITE_ID = 1
