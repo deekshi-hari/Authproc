@@ -33,7 +33,7 @@ class AppleLogin(SocialLoginView):
     adapter_class = AppleOAuth2Adapter
     callback_url = "https://auth-django-proc.herokuapp.com/accounts/apple/login/callback/"
     client_class = AppleOAuth2Client
-    serializer_class = CustomAppleSocialLoginSerializer
+    # serializer_class = CustomAppleSocialLoginSerializer
 
 
 """

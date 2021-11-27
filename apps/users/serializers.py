@@ -7,6 +7,7 @@ from allauth.socialaccount.helpers import complete_social_login
 from allauth.account import app_settings as allauth_settings
 from requests.exceptions import HTTPError
 from allauth.account.adapter import get_adapter
+from allauth.utils import email_address_exists, get_username_max_length
 
 # class CustomAppleSocialLoginSerializer(SocialLoginSerializer):
 #     access_token = serializers.CharField(required=False, allow_blank=True)
@@ -102,6 +103,7 @@ from rest_auth.registration.serializers import SocialLoginSerializer
 class CustomAppleSocialLoginSerializer(SocialLoginSerializer):
     access_token = serializers.CharField(required=False, allow_blank=True)
     code = serializers.CharField(required=False, allow_blank=True)
+    id_token = serializers.CharField(required=False, allow_blank=True)
 
     def _get_request(self):
         request = self.context.get('request')
