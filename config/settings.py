@@ -194,7 +194,7 @@ SOCIALACCOUNT_PROVIDERS = {
     'apple': {
         'APP': {
             # Your service identifier.
-            'client_id':"com.tradebrains.testapp2",
+            'client_id':"com.dailyraven.portalApp",
 
             # The Key ID (visible in the "View Key Details" page).
             "secret": "V8XP745SV5",
